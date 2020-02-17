@@ -107,6 +107,12 @@
                     <option value="10">October</option>
                     <option value="11">November</option>
                     <option value="12">December</option>
+<?php
+    // for($month = 1; $month <= 12; $month++){
+    //     echo "<option value='$month'>".DateTime()."</option>".PHP_EOL;
+    // }
+?>
+
                 </select>
             </div>
             <h4>Sort by...</h4>
@@ -162,9 +168,13 @@
 
                     //SalesId Filter
                     if(
-                        (strlen($salesId) == 0 || $sale[1] === $salesId) &&
-                        (strlen($month) == 0 || intval($month) == $curMonth)
-                        ){
+                        // (strlen($salesId) == 0 || $sale[1] === $salesId) &&
+                        // (strlen($month) == 0 || intval($month) == $curMonth)
+                        ($salesId == "" || $salesId == $sale[1]) &&
+                        ($month == "" || $month == $curMonth)
+                        )
+                        
+                        {
 
                         echo "<tr>".PHP_EOL;
                         echo "<td>".$sale[0]."</td>".PHP_EOL;
