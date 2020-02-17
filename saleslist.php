@@ -78,7 +78,7 @@
     </pre>
     <div class="container">
         <h1>Sales Data</h1>
-        <form class="half center">
+        <form class="">
             <div class="row">
                 <label for="salesId">Sales ID</label>
                 <!-- <input name="salesId" id="salesId" type="text"> -->
