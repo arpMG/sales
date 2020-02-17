@@ -29,7 +29,9 @@
             $temp = $sales_file->fgetcsv();
             if($temp){
                 $sales[] = $temp;
-                $salesIds[] = $temp[1]; //for drop down list
+
+                //Create a separate array with just salesIds - for filter drop down list
+                $salesIds[] = $temp[1];
             }
         }
         $sales_file = null;
@@ -65,8 +67,10 @@
    
         }
 
-        //This is for the drop down list
+        //Only want to keep each salesId ONCE
         $salesIds = array_unique($salesIds);
+        //Lets put them in order for niceties
+        sort($salesIds);
 
     ?>
 </head>
@@ -95,7 +99,7 @@
                 <label for="month">Month</label>
                 <select name="month" id="month">
                     <option value="">All</option>
-                    <option value="1">January</option>
+                    <!-- <option value="1">January</option>
                     <option value="2">February</option>
                     <option value="3">March</option>
                     <option value="4">April</option>
@@ -106,12 +110,13 @@
                     <option value="9">September</option>
                     <option value="10">October</option>
                     <option value="11">November</option>
-                    <option value="12">December</option>
-<?php
-    // for($month = 1; $month <= 12; $month++){
-    //     echo "<option value='$month'>".DateTime()."</option>".PHP_EOL;
-    // }
-?>
+                    <option value="12">December</option> -->
+                    <?php
+                    //These 2 lines replace the 12 lines of HTML
+                        for($m = 1; $m <= 12; $m++){
+                            echo "<option value='$month'>".DateTime::createFromFormat("!m", $m)->format('F')."</option>".PHP_EOL;
+                        }
+                    ?>
 
                 </select>
             </div>
