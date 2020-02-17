@@ -34,10 +34,11 @@
         }
         $sales_file = null;
 
-        //Format all the dates and put them back
+        // //Format all the dates and put them back
         // for($i=0; $i<count($sales); $i++) {
         //    $date = DateTime::createFromFormat('d/m/Y', $sales[$i][2]);
         //    $sales[$i][2] = $date->format('Y-m-d');
+        //    $sales[$i][3] = number_format($sales[$i][3], 2, '.', '');
         // }
         // $sales_file = new SplFileObject('data/sales.csv', 'w');
         // foreach ($sales as $sale){
@@ -77,7 +78,7 @@
     </pre>
     <div class="container">
         <h1>Sales Data</h1>
-        <form>
+        <form class="half center">
             <div class="row">
                 <label for="salesId">Sales ID</label>
                 <!-- <input name="salesId" id="salesId" type="text"> -->
@@ -121,7 +122,7 @@
             </div>
 
         </form>
-        <div class="row">
+        <div class="row half center">
             <h3>Current Filter</h3>
             <h4>
                 <span class="filter">Sales Id: </span> 

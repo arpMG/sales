@@ -68,6 +68,9 @@ button.disabled{
 select{
     min-width: 30%;
 }    
+.center {
+    margin: 0 auto;
+}
 
 /*Table Styling*/
 .tbl {
