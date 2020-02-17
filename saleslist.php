@@ -6,7 +6,6 @@
     <title>Sales List</title>
 
     <link rel="stylesheet" href="style.css">
-
     <?php
 
         //Search keys
