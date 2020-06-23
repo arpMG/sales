@@ -114,7 +114,7 @@
                     <?php
                     //These 2 lines replace the 12 lines of HTML
                         for($m = 1; $m <= 12; $m++){
-                            echo "<option value='$month'>".DateTime::createFromFormat("!m", $m)->format('F')."</option>".PHP_EOL;
+                            echo "<option value='$m'>".DateTime::createFromFormat("!m", $m)->format('F')."</option>".PHP_EOL;
                         }
                     ?>
 

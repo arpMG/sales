@@ -92,7 +92,10 @@
                     if(
                         // (strlen($salesId) == 0 || $sale[1] === $salesId) &&
                         // (strlen($month) == 0 || intval($month) == $curMonth)
-                        ($salesId == "" || $salesId == $sale[1]) &&
+                        ($salesId == "" || $salesId == $sale[1]) 
+                        
+                        &&
+                        
                         ($month == "" || $month == $curMonth)
                         ){
                             
